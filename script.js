@@ -2,16 +2,16 @@ console.log("SBA_308A");
 
 document.getElementById('searchButton').addEventListener('click', async () => {
     const pokemonInput = document.getElementById('pokemonInput').value.toLowerCase();
-    const pokemonContainer = document.getElementById('pokemonContainer');
+    const pokemonResultContainer = document.getElementById('pokemonResultContainer');
     
-    // Clear previous results
-    pokemonContainer.innerHTML = '';
+    // Clear Past Results
+    pokemonResultContainer.innerHTML = '';
   
     if (!pokemonInput) {
       alert('Enter your desired Pokémon by Name or ID');
       return;
     }
-    //Fetching inputing pokemon
+    //Fetching Pokemon by ID or Name
     try {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput}`);
       if (!response.ok) {
@@ -19,7 +19,7 @@ document.getElementById('searchButton').addEventListener('click', async () => {
       }
       
       const pokemon = await response.json();
-      
+      //Pokemon Data
       const pokemonData = `
         <h2>${pokemon.name} (#${pokemon.id})</h2>
         <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
@@ -28,10 +28,11 @@ document.getElementById('searchButton').addEventListener('click', async () => {
         <p><strong>Type:</strong> ${pokemon.types.map(typeInfo => typeInfo.type.name).join(', ')}</p>
       `;
       
-      pokemonContainer.innerHTML = pokemonData;
+      //Error Handling
+      pokemonResultContainer.innerHTML = pokemonData;
     } catch (error) {
       console.error('Error fetching Pokémon data:', error);
-      alert('Could not fetch Pokémon data. Please try again.');
+      alert('Unable to fetch Pokémon data. Try again.');
     }
   });
   
