@@ -79,7 +79,7 @@ document.getElementById('searchButton').addEventListener('click', async (event) 
     pokemonResultContainer.innerHTML = '';
 
     if (!pokemonInput) {
-        alert('Enter your desired Pokémon by Name or ID.');
+        alert('Enter your desired Pokémon by Name or ID (1-1025).');
         return;
     }
 
@@ -104,6 +104,6 @@ document.getElementById('searchButton').addEventListener('click', async (event) 
         pokemonResultContainer.innerHTML = pokemonData;
     } catch (error) {
         console.error('Error fetching Pokémon data:', error);
-        alert('Unable to fetch Pokémon data. Refresh the page and try again.');
+        alert('Unable to fetch Pokémon data. Try again. Be sure to only enter a valid name or ID (1-1025).');
     }
 });
