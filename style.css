@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: 'Pokémon Solid';
+    src: url(./fonts/Pokemon\ Hollow.ttf);
+}
+
 body { font-family: Arial, sans-serif; }
     .pokemon-container { margin-top: 50px; }
     .pokemon-container img { max-width: 160px; }
