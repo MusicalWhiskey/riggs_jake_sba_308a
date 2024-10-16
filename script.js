@@ -14,6 +14,18 @@ style.textContent = `
   justify-content: center;
   min-width: 650px;
 }
+  #word-pokemon {
+    font-family: 'Pokémon Solid', sans-serif;
+    color: darkblue;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    font-size: 75px;
+  }
+    #word-pokedex {
+    font-family: 'Pokémon Solid', sans-serif;
+    color: darkred;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    font-size: 75px;
+  }
 
 .pokemon-container {
   padding: 20px;
