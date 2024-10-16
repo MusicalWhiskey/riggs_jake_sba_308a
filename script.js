@@ -5,7 +5,7 @@ let style = document.createElement('style');
 style.textContent = `
   .pokemon-text {
   font-family: 'Pokémon Solid', sans-serif; /* Requires the Pokémon font to be loaded */
-  font-size: 80px;
+  font-size: 75px;
   color: white;
   text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
   height: 80px;
