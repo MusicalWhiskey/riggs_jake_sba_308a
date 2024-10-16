@@ -6,9 +6,14 @@ let style = document.createElement('style');
 style.innerHTML = `
   .pokemon-text {
     font-family: 'Pokémon Solid', sans-serif; /* Requires the Pokémon font to be loaded */
-    font-size: 100px;
+    font-size: 80px;
     color: white;
     text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
+     height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 650px;
   }
 `;
 document.head.appendChild(style);

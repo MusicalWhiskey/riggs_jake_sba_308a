@@ -7,5 +7,5 @@
 body { font-family: Arial, sans-serif; }
     .pokemon-container { margin-top: 50px; }
     .pokemon-container img { max-width: 160px; }
+    .pokemon-container p { min-width: 700px;}
 
-    
