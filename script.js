@@ -2,8 +2,6 @@ console.log("SBA_308A");
 
 document.body.style.background = "linear-gradient(to bottom, black, darkred, white, darkblue, black)";
 
-document.body.innerHTML = "<header class='pokemon-text'>Pokémon</header>";
-
 let style = document.createElement('style');
 style.innerHTML = `
   .pokemon-text {
@@ -11,10 +9,12 @@ style.innerHTML = `
     font-size: 100px;
     color: white;
     text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
-    text-align: center;
   }
 `;
 document.head.appendChild(style);
+
+document.body.getElementsByClassName("pokemon-text"); style.textAlign = "center";
+document.body.getElementsByClassName("pokemon-text"); style.customHeaderHeight = "200px";
 
 document.getElementById('searchButton').addEventListener('click', async () => {
     const pokemonInput = document.getElementById('pokemonInput').value.toLowerCase();
