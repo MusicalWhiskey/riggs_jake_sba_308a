@@ -1,61 +1,72 @@
 console.log("SBA_308A");
-document.body.style.background = "linear-gradient(to bottom, black, darkred, white, darkblue, black)";
+document.getElementById('pokemonResultContainer').style.background = "linear-gradient(to bottom, black, darkred, white, darkblue, black)";
 
 let style = document.createElement('style');
 style.textContent = `
   .pokemon-text {
-    font-family: 'Pokémon Solid', sans-serif; /* Requires the Pokémon font to be loaded */
-    font-size: 80px;
-    color: white;
-    text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 650px;
-  }
-  .pokemon-container {
-    padding: 20px;
-    margin-top: 100px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Pokémon Solid', sans-serif; /* Apply Pokémon font to the results */
-  }
-  .form-control {
-    font-family: 'Pokémon Solid', sans-serif;
-    font-size: 20px;
-    margin-top: 50px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e7e7e7;
-    textcolor: white;
-    border-color: darkblue;
-  }
-  .btn-primary {
-    font-family: 'Pokémon Solid', sans-serif;
-    margin-top: 50px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    background-color: #e7e7e7;
-    color: blue;
-    border-color: darkblue;
-  }
-  .input-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .pokemon-sprite {
-    width: 350px; /* Adjust the width as needed */
-    height: auto;
-  }
+  font-family: 'Pokémon Solid', sans-serif; /* Requires the Pokémon font to be loaded */
+  font-size: 80px;
+  color: white;
+  text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 1px 0 blue;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 650px;
+}
+
+.pokemon-container {
+  padding: 20px;
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pokémon Solid', sans-serif; /* Apply Pokémon font to the results */
+}
+
+.form-control {
+  font-family: 'Pokémon Solid', sans-serif;
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e7e7;
+  textcolor: white;
+  border-color: darkblue;
+}
+
+.btn-primary {
+  font-family: 'Pokémon Solid', sans-serif;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #e7e7e7;
+  color: blue;
+  border-color: darkblue;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure input and button stretch across the full width */
+}
+
+.input-group-append {
+  display: flex;
+  align-items: center;
+}
+
+.pokemon-sprite {
+  width: 350px; /* Adjust the width as needed */
+  height: auto;
+}
 `;
 document.head.appendChild(style);
 
